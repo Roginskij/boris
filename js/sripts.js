@@ -22,7 +22,7 @@ $(document).ready(function () {
         }
     })
     
-    $('.arrow_top').click(function(){
+    $('.top_button').click(function(){
         var menu = $('.menu');
         var ifOn = $(menu).css('top');
         for(var i = 0; i < menu.length; i++){
@@ -136,6 +136,32 @@ $(document).ready(function () {
                 });
                 $(button).attr('turn', 'off');
             }
+        }
+    })
+    /* open list with display */
+    $('.menu_5').click(function(e){
+        e.preventDefault();
+        $(this).next().stop();
+        $(this).next().toggle('slow');
+    })
+    /* grid sistem */
+    var grid_1 = '<div class="row_1"><div class="col-xs-12"></div></div>';
+    var grid_2 = '<div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
+    var grid_3 = '<div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
+    
+    $('.listDisplay li').click(function(){
+        var val = $(this).attr('val');
+        var container = $('.grid');
+        switch (val){
+            case '1':
+                container.html(grid_1);
+                break;
+            case '2':
+                container.html(grid_2);
+                break;
+            case '3':
+                container.html(grid_3);
+                break;
         }
     })
 })

@@ -1,9 +1,33 @@
+$transition: all 0.5s ease;
+ 
 html {
     height: 100%;
     body {
         background: url(../img/bg_html.png) no-repeat;
         background-size: cover;
         height: 100%;
+    }
+}
+.grid{
+    height: 96%;
+    width: 100%;
+    div{
+        .col-xs-6, .col-xs-12{
+            height: 100%;
+            border: 1px dashed #460800;
+            border-radius: 4px;
+        }
+    }
+    .row_1{
+        height: 100%;
+    }
+    .row_2{
+        height: 50%;
+        
+    }
+    .row_3{
+        height: 33%;
+        
     }
 }
 
@@ -153,9 +177,10 @@ html {
 }
 
 #top_menu {
-    position: absolute;
-    left: 0px;
-    right: 0px;
+    height: 30px;
+    .top_button:hover{
+        cursor: pointer;
+    }
     .top_button {
         width: 100%;
         height: 30px;
@@ -172,9 +197,6 @@ html {
             font-weight: bold;
             font-size: 15px;
         }
-        .arrow_top:hover{
-            cursor: pointer;
-        }
         .arrow_top {
             background: url(../img/arrow.png) no-repeat;
             width: 12px;
@@ -184,30 +206,32 @@ html {
             margin-top: -22px;
             transform: rotate(90deg);
         }
-        .right_arrow_menu:hover{
-            cursor: pointer;
+       
+    }
+    .right_arrow_menu {
+        z-index: 9;
+        width: 40px;
+        height: 30px;
+        background: rgb(108,65,31);
+        background: -moz-linear-gradient(top,  rgba(108,65,31,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 50%, rgba(108,65,31,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(108,65,31,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(108,65,31,1) 100%);
+        background: linear-gradient(to bottom,  rgba(108,65,31,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(108,65,31,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f',GradientType=0 );
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        .arrow_top_bar {
+            background: url(../img/arrow.png) no-repeat;
+            width: 12px;
+            height: 16px;
+            margin: 0 auto;
+            position: relative;
+            transform: rotate(0deg);
+            top: 6px;
         }
-        .right_arrow_menu {
-            width: 40px;
-            height: 30px;
-            background: rgb(108,65,31);
-            background: -moz-linear-gradient(top,  rgba(108,65,31,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 50%, rgba(108,65,31,1) 100%);
-            background: -webkit-linear-gradient(top,  rgba(108,65,31,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(108,65,31,1) 100%);
-            background: linear-gradient(to bottom,  rgba(108,65,31,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(108,65,31,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f',GradientType=0 );
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            .arrow_top_bar {
-                background: url(../img/arrow.png) no-repeat;
-                width: 12px;
-                height: 16px;
-                margin: 0 auto;
-                position: relative;
-                transform: rotate(0deg);
-                top: 6px;
-            }
-        }
+    }
+    .right_arrow_menu:hover{
+        cursor: pointer;
     }
     .menu {
         background: url(../img/menu_bag.png) no-repeat;
@@ -246,13 +270,36 @@ html {
                 .menu_5 {
                     background: url(../img/setting_11.png);
                 }
+                .listDisplay{
+                    display: none;
+                    position: absolute;
+                    padding: 0px;
+                    width: 55px;
+                    text-align: center;
+                    background: url(../img/orange-fon.png) no-repeat;
+                    margin-top: 11px;
+                    font-size: 17px;
+                    li{
+                        color: #fff;
+                        width: 100%;
+                        padding: 5px 0px;
+                        transition: $transition;
+                        margin: 0px;
+                    }
+                    li:hover{
+                        background: darkgoldenrod;
+                        color: #000;
+                        transition: $transition;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
 }
 
 #bar_nav {
-    position: absolute;
+    position: fixed;
     right: 0;
     width: 220px;
     top: 80px;
