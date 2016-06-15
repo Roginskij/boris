@@ -5,6 +5,10 @@ html {
     background-size: cover;
     height: 100%; }
 
+.container {
+  min-width: 992px;
+  max-width: 1200px; }
+
 .grid {
   height: 96%;
   width: 100%; }

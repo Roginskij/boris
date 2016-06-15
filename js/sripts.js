@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+    /* time at the top menu */
     setInterval(function(){
         function addZero(i) {
             if (i < 10) {
@@ -11,7 +11,7 @@ $(document).ready(function () {
         var time = date.getHours().toString() + ':' + addZero(date.getMinutes().toString()) + ':' + addZero(date.getSeconds().toString());
         $('#time').text(time);
     }, 1000)
-    
+    /* right bar nav, click on <li> will open list with text */
     $('.open_tab').click(function(e){
         var ifOn = $(this).next().css('display');
         if(ifOn == 'block'){
@@ -21,7 +21,7 @@ $(document).ready(function () {
             $(this).next().show();
         }
     })
-    
+    /* open top menu */
     $('.top_button').click(function(){
         var menu = $('.menu');
         var ifOn = $(menu).css('top');
@@ -37,7 +37,7 @@ $(document).ready(function () {
             }
         }
     })
-    
+    /* open right bar */
     $('.right_arrow_menu').click(function(){
         var block = $('#bar_nav').css('right');
         if(block == '-220px'){
@@ -50,7 +50,7 @@ $(document).ready(function () {
             })
         }
     })
-    
+    /* big button */
     $('.button_big').click(function (e) {
         e.preventDefault();
         var button = $(this).children().next();
@@ -138,12 +138,14 @@ $(document).ready(function () {
             }
         }
     })
-    /* open list with display */
+    
+    /* open grids list with display */
     $('.menu_5').click(function(e){
         e.preventDefault();
         $(this).next().stop();
         $(this).next().toggle('slow');
     })
+    
     /* grid sistem */
     var grid_1 = '<div class="row_1"><div class="col-xs-12"></div></div>';
     var grid_2 = '<div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
