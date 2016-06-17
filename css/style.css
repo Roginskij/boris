@@ -256,7 +256,8 @@ html {
   right: 0;
   width: 220px;
   top: 80px;
-  right: -220px; }
+  right: -220px;
+  z-index: 10; }
   #bar_nav .bar ul {
     padding: 0px;
     margin: 0px; }
