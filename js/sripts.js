@@ -147,7 +147,7 @@ $(document).ready(function () {
     })
     
     /* grid sistem */
-    var grid_1 = '<div class="row_1"><div class="col-xs-12"></div></div>';
+    var grid_1 = '<div class="row_1"><div class="col-xs-12"><canvas id="vc1"></canvas></div></div>';
     var grid_2 = '<div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
     var grid_3 = '<div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
     
