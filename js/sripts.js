@@ -157,6 +157,7 @@ $(document).ready(function () {
         switch (val){
             case '1':
                 container.html(grid_1);
+                getCamUri();
                 break;
             case '2':
                 container.html(grid_2);
