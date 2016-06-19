@@ -148,8 +148,8 @@ $(document).ready(function () {
     
     /* grid sistem */
     var grid_1 = '<div class="row_1"><div class="col-xs-12"><canvas id="vc1"></canvas></div></div>';
-    var grid_2 = '<div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_2"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
-    var grid_3 = '<div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div><div class="row_3"><div class="col-xs-6"></div><div class="col-xs-6"></div></div>';
+    var grid_2 = '<div class="row_2"><div class="col-xs-6"><canvas id="vc1"></canvas></div><div class="col-xs-6"><canvas id="vc2"></canvas></div></div><div class="row_2"><div class="col-xs-6"><canvas id="vc3"></canvas></div><div class="col-xs-6"><canvas id="vc4"></canvas></div></div>';
+    var grid_3 = '<div class="row_3"><div class="col-xs-6"><canvas id="vc1"></canvas></div><div class="col-xs-6"><canvas id="vc2"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas id="vc3"></canvas></div><div class="col-xs-6"><canvas id="vc4"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas id="vc5"></canvas></div><div class="col-xs-6"><canvas id="vc6"></canvas></div></div>';
     
     $('.listDisplay li').click(function(){
         var val = $(this).attr('val');

@@ -4,6 +4,7 @@ $(document).ready(function() {
 })
 function getCamUri() {
     $.getJSON('/h4l/get_cam_uri',{},function(data) {
+        console.log(data);
         uri = data.response;
         var client = new WebSocket(uri);
         var canvas = document.getElementById('vc1');
