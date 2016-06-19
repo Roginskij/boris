@@ -1,20 +1,20 @@
 var player;
 $(document).ready(function () {
-    getCamUri();
+    
     $('.tab select').change(function () {
         var val = $(this).val();
         var id = $(this).attr('id');
         var url = $('#' + id + ' :selected').attr('uri');
-        var block = $('#vc' + val);
+        var canvas = document.getElementById('vc'+val);
         var client = new WebSocket(url);
         player = new jsmpeg(client, {
-            canvas: block
+            canvas: canvas
         });
     })
 })
 
 function getCamUri() {
-    $.getJSON('/h4l/get_cam_uri', {}, function (data) {
+    $.get('/h4l/get_cam_uri', {}, function (data) {
         console.log(data);
         uri = data.response;
         var client = new WebSocket(uri);
