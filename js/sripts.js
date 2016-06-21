@@ -172,7 +172,6 @@ $(document).ready(function () {
         var uri;
         $.get('/h4l/get_group_ids', {}, function (data) {
             uri = data.response;
-            console.log(uri);
             $('.tab li').remove();
             for( var i = 0; i < uri.length; i++){
                 $('.tab').append('<li uri="' + uri[i] + '"><img src="./img/cam_green.png" alt="">Хлев<select name="" ><option value=""></option><option value="1">1</option></select></li>')
@@ -204,6 +203,7 @@ $(document).ready(function () {
                 selectChange();
                 break;
             case '4':
+                console.log('work');
                 container.html(grid_2);
                 liTag();
                 selectsGrid();
