@@ -1,16 +1,6 @@
 var player;
 $(document).ready(function () {
-    
-    $('.tab select').change(function () {
-        var val = $(this).val();
-        var id = $(this).attr('id');
-        var url = $('#' + id + ' :selected').attr('uri');
-        var canvas = document.getElementById('vc'+val);
-        var client = new WebSocket(url);
-        player = new jsmpeg(client, {
-            canvas: canvas
-        });
-    })
+    selectChange();
 })
 
 function getCamUri() {
@@ -23,4 +13,18 @@ function getCamUri() {
             canvas: canvas
         });
     });
+}
+
+function selectChange(){
+     $('.tab select').change(function () {
+        var val = $(this).val();
+        var id = $(this).attr('id');
+        var url = $(this).parent().attr('uri');
+        console.log(url);
+        var canvas = document.getElementById('vc'+val);
+        var client = new WebSocket(url);
+        player = new jsmpeg(client, {
+            canvas: canvas
+        });
+    })
 }
