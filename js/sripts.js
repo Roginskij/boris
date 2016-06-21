@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    selectChange();
     /* time at the top menu */
     setInterval(function(){
         function addZero(i) {
