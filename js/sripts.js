@@ -152,20 +152,6 @@ $(document).ready(function () {
     var grid_2 = '<div class="row_2"><div class="col-xs-6"><canvas id="vc1"></canvas></div><div class="col-xs-6"><canvas id="vc2"></canvas></div></div><div class="row_2"><div class="col-xs-6"><canvas id="vc3"></canvas></div><div class="col-xs-6"><canvas id="vc4"></canvas></div></div>';
     var grid_3 = '<div class="row_3"><div class="col-xs-6"><canvas id="vc1"></canvas></div><div class="col-xs-6"><canvas id="vc2"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas id="vc3"></canvas></div><div class="col-xs-6"><canvas id="vc4"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas id="vc5"></canvas></div><div class="col-xs-6"><canvas id="vc6"></canvas></div></div>';
     
-    /* build li tag */
-    function liTag(){
-        var uri;
-        $.get('/h4l/get_group_ids', {}, function (data) {
-            uri = data.response;
-            console.log(uri);
-            $('.tab li').remove();
-            for( var i = 0; i < uri.length; i++){
-                $('.tab').append('<li uri="' + uri[i] + '"><img src="./img/cam_green.png" alt="">Хлев<select name="" ><option value=""></option><option value="1">1</option></select></li>')
-            }
-        });
-        
-    }
-    liTag()
     /* event on change select */
     function selectChange(){
          $('.tab select').change(function () {
@@ -180,6 +166,22 @@ $(document).ready(function () {
              console.log(url)
         })
     }
+    
+    /* build li tag */
+    function liTag(){
+        var uri;
+        $.get('/h4l/get_group_ids', {}, function (data) {
+            uri = data.response;
+            console.log(uri);
+            $('.tab li').remove();
+            for( var i = 0; i < uri.length; i++){
+                $('.tab').append('<li uri="' + uri[i] + '"><img src="./img/cam_green.png" alt="">Хлев<select name="" ><option value=""></option><option value="1">1</option></select></li>')
+            }
+            selectChange();
+        });
+        
+    }
+    liTag()
     /* build select */
     $('.listDisplay li').click(function(){
         var val = $(this).attr('val');
@@ -214,7 +216,6 @@ $(document).ready(function () {
                 break;
         }
     })
-    selectChange();
 })
 
 
