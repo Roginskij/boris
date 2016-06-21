@@ -198,14 +198,12 @@ $(document).ready(function () {
         switch (val){
             case '1':
                 container.html(grid_1);
-                liTag();
                 selectsGrid();
                 selectChange();
                 break;
             case '4':
                 console.log('work');
                 container.html(grid_2);
-                liTag();
                 selectsGrid();
                 selectChange();
                 break;
