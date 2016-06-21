@@ -154,14 +154,16 @@ $(document).ready(function () {
     
     /* build li tag */
     function liTag(){
-        var uri = ['ws://91.196.54.125:8084/1', 'ws://91.196.54.125:8084/2', 'ws://91.196.54.125:8084/3'];
-//        $.get('/h4l/get_cam_uri', {}, function (data) {
-//            uri = data.response;
-//        });
-        $('.tab li').remove();
-        for( var i = 0; i < uri.length; i++){
-            $('.tab').append('<li uri="' + uri[i] + '"><img src="./img/cam_green.png" alt="">Хлев<select name="" ><option value=""></option><option value="1">1</option></select></li>')
-        }
+        var uri;
+        $.get('/h4l/get_group_ids', {}, function (data) {
+            uri = data.response;
+            console.log(uri);
+            $('.tab li').remove();
+            for( var i = 0; i < uri.length; i++){
+                $('.tab').append('<li uri="' + uri[i] + '"><img src="./img/cam_green.png" alt="">Хлев<select name="" ><option value=""></option><option value="1">1</option></select></li>')
+            }
+        });
+        
     }
     liTag()
     /* build select */

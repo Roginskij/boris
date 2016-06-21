@@ -4,7 +4,7 @@ $(document).ready(function () {
 })
 
 function getCamUri() {
-    $.get('/h4l/get_cam_uri', {}, function (data) {
+    $.get('/h4l/get_group_ids', {}, function (data) {
         console.log(data);
         uri = data.response;
         var client = new WebSocket(uri);
@@ -18,9 +18,7 @@ function getCamUri() {
 function selectChange(){
      $('.tab select').change(function () {
         var val = $(this).val();
-        var id = $(this).attr('id');
         var url = $(this).parent().attr('uri');
-        console.log(url);
         var canvas = document.getElementById('vc'+val);
         var client = new WebSocket(url);
         player = new jsmpeg(client, {
