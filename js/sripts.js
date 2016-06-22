@@ -34,6 +34,7 @@ $(document).ready(function () {
                 $(menu).animate({
                     'top': '-67px'
                 })
+                $('.menu_5').next().hide('slow');
             }
         }
     })
