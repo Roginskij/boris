@@ -258,79 +258,85 @@ canvas {
   position: fixed;
   right: 0;
   width: 220px;
-  top: 80px;
+  top: 50px;
   right: -220px;
-  z-index: 10; }
-  #bar_nav .bar ul {
-    padding: 0px;
-    margin: 0px; }
-    #bar_nav .bar ul .on_tab {
-      display: block; }
-    #bar_nav .bar ul .open_tab:hover {
-      cursor: pointer; }
-    #bar_nav .bar ul .nav_cams:before {
-      content: '';
-      background: url(../img/menu_cam.png);
-      position: absolute;
-      left: 10px;
-      display: block;
-      width: 20px;
-      height: 14px;
-      top: 4px; }
-    #bar_nav .bar ul li {
-      background: url(../img/list_bag.png) no-repeat;
-      width: 220px;
-      min-height: 27px;
-      margin-bottom: 5px;
-      font-size: 16px;
-      font-weight: bold;
-      padding-left: 60px;
-      position: relative;
-      z-index: 2;
-      list-style-type: none;
-      color: #331703;
-      margin-left: -1px; }
-    #bar_nav .bar ul ul {
-      display: none;
-      background: url(../img/orange-fon.png) no-repeat;
-      position: relative;
-      z-index: 1;
-      width: 219px;
-      margin-top: -10px;
-      padding-top: 10px; }
-      #bar_nav .bar ul ul h4:before {
-        content: "";
-        background: url(../img/cam.png) no-repeat;
-        width: 30px;
-        height: 30px;
-        display: block;
-        position: absolute;
-        left: 10px; }
-      #bar_nav .bar ul ul h4:hover {
-        cursor: default; }
-      #bar_nav .bar ul ul h4 {
-        margin: 0px;
-        padding-left: 50px;
-        color: #7d3e18;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none; }
-      #bar_nav .bar ul ul li:hover {
+  z-index: 10;
+  height: 100%; }
+  #bar_nav .bar {
+    height: 100%; }
+    #bar_nav .bar ul {
+      padding: 0px;
+      margin: 0px;
+      height: 100%; }
+      #bar_nav .bar ul .on_tab {
+        display: block; }
+      #bar_nav .bar ul .open_tab:hover {
         cursor: pointer; }
-      #bar_nav .bar ul ul li {
-        background: none;
-        padding-left: 10px;
-        font-size: 15px;
-        padding-left: 50px;
-        line-height: 35px;
-        color: #7d3e18;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none; }
-        #bar_nav .bar ul ul li img {
-          margin-right: 5px; }
+      #bar_nav .bar ul .nav_cams:before {
+        content: '';
+        background: url(../img/menu_cam.png);
+        position: absolute;
+        left: 10px;
+        display: block;
+        width: 20px;
+        height: 14px;
+        top: 4px; }
+      #bar_nav .bar ul li {
+        background: url(../img/list_bag.png) no-repeat;
+        width: 220px;
+        min-height: 27px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 60px;
+        position: relative;
+        z-index: 2;
+        list-style-type: none;
+        color: #331703;
+        margin-left: -1px; }
+      #bar_nav .bar ul ul {
+        overflow: scroll;
+        display: none;
+        background: url(../img/orange-fon.png);
+        position: relative;
+        z-index: 1;
+        width: 219px;
+        margin-top: -10px;
+        padding-top: 10px;
+        height: calc(100% - 17%); }
+        #bar_nav .bar ul ul h4:before {
+          content: "";
+          background: url(../img/cam.png) no-repeat;
+          width: 30px;
+          height: 30px;
+          display: block;
+          position: absolute;
+          left: 10px; }
+        #bar_nav .bar ul ul h4:hover {
+          cursor: default; }
+        #bar_nav .bar ul ul h4 {
+          margin: 0px;
+          padding-left: 50px;
+          color: #7d3e18;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          -webkit-user-select: none;
+          user-select: none; }
+        #bar_nav .bar ul ul li:hover {
+          cursor: pointer; }
+        #bar_nav .bar ul ul li {
+          background: none;
+          padding-left: 10px;
+          font-size: 15px;
+          padding-left: 50px;
+          line-height: 35px;
+          color: #7d3e18;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          -webkit-user-select: none;
+          user-select: none; }
+          #bar_nav .bar ul ul li img {
+            margin-right: 5px; }
 
 #info_sistem .info_bg {
   background: url(../img/bg_left_menu.png) no-repeat;
