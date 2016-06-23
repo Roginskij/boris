@@ -347,6 +347,7 @@ canvas{
                 list-style-type: none;
                 color: #331703;
                 margin-left: -1px;
+                
             }
             ul {
                 display: none;
@@ -365,10 +366,20 @@ canvas{
                     position: absolute;
                     left: 10px;
                 }
+                h4:hover{
+                    cursor: default;
+                }
                 h4 {
                     margin: 0px;
                     padding-left: 50px;
                     color: #7d3e18;
+                     -moz-user-select: none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none; 
+                }
+                li:hover{
+                    cursor: pointer;
                 }
                 li {
                     background: none;
@@ -377,6 +388,10 @@ canvas{
                     padding-left: 50px;
                     line-height: 35px;
                     color: #7d3e18;
+                    -moz-user-select: none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none; 
                     img {
                         margin-right: 5px;
                     }
