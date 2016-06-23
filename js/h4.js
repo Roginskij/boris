@@ -30,7 +30,7 @@
                   var data = {
                       id: id
                   }
-                  $.get('/get_cam_uri', data, function(data){
+                  $.get('/h4l/get_cam_uri', data, function(data){
                       if(data.state == 'ok'){
                         var uri = data.response;
                         var client = new WebSocket(uri);
