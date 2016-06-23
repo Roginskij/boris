@@ -314,13 +314,10 @@ canvas{
     top: 50px;
     right: -220px;
     z-index: 10;
-    height: 100%;
     .bar {
-        height: 100%;
         ul {
             padding: 0px;
             margin: 0px;
-            height: 100%;
             .on_tab{
                 display: block;
             }
@@ -353,15 +350,13 @@ canvas{
                 
             }
             ul {
-                overflow: scroll;
                 display: none;
-                background: url(../img/orange-fon.png);
+                background: url(../img/orange-fon.png) no-repeat;
                 position: relative;
                 z-index: 1;
                 width: 219px;
                 margin-top: -10px;
                 padding-top: 10px;
-                height: calc(100% - 17%);
                 h4:before {
                     content: "";
                     background: url(../img/cam.png) no-repeat;

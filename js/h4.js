@@ -23,24 +23,26 @@
 
         $( ".canvas" ).droppable({
           drop: function( event, ui ) {
-              var id = ui.draggable.attr('url');
-              var text = ui.draggable.text();
-              var id_canvas = $(this).attr('id');
-              var data = {
-                  id: id
-              }
-              $.get('/get_cam_uri', data, function(data){
-                  if(data.state == 'ok'){
-                    var uri = data.response;
-                    var client = new WebSocket(uri);
-                    var canvas = document.getElementById(id_canvas);
-                    var player = new jsmpeg(client, {
-                        canvas: canvas
-                    });
-                  }else{
-                      throw ("I can't to download by url")
+              if($(this).hasClass('canvas')){
+                  var id = ui.draggable.attr('url');
+                  var text = ui.draggable.text();
+                  var id_canvas = $(this).attr('id');
+                  var data = {
+                      id: id
                   }
-              })
+                  $.get('/get_cam_uri', data, function(data){
+                      if(data.state == 'ok'){
+                        var uri = data.response;
+                        var client = new WebSocket(uri);
+                        var canvas = document.getElementById(id_canvas);
+                        var player = new jsmpeg(client, {
+                            canvas: canvas
+                        });
+                      }else{
+                          throw ("I can't to download by url")
+                      }
+                  })
+              }
           }
         });
     }
