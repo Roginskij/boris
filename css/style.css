@@ -21,13 +21,14 @@ canvas {
   .grid div .col-xs-6, .grid div .col-xs-12 {
     height: 100%; }
   .grid .row_1 {
-    height: 100%; }
+    height: 99%;
+    margin: 1% 0; }
   .grid .row_2 {
-    height: 48%;
-    margin-bottom: 1%; }
+    height: 49%;
+    margin: 1% 0; }
   .grid .row_3 {
-    height: 30%;
-    margin-bottom: 1%; }
+    height: 31%;
+    margin: 1% 0; }
 
 .menu_setting > ul > li > a:hover .bg_menu_hover {
   background-position: 0px -43px; }
