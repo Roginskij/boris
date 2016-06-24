@@ -23,9 +23,11 @@ canvas {
   .grid .row_1 {
     height: 100%; }
   .grid .row_2 {
-    height: 50%; }
+    height: 48%;
+    margin-bottom: 1%; }
   .grid .row_3 {
-    height: 33%; }
+    height: 30%;
+    margin-bottom: 1%; }
 
 .menu_setting > ul > li > a:hover .bg_menu_hover {
   background-position: 0px -43px; }
