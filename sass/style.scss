@@ -216,6 +216,7 @@ canvas{
             position: relative;
             margin-top: -22px;
             transform: rotate(90deg);
+            transition: $transition;
         }
        
     }
@@ -239,6 +240,7 @@ canvas{
             position: relative;
             transform: rotate(0deg);
             top: 6px;
+            transition: $transition;
         }
     }
     .right_arrow_menu:hover{
@@ -316,10 +318,13 @@ canvas{
     top: 50px;
     right: -220px;
     z-index: 10;
+    height: 100%;
     .bar {
+        height: 100%;
         ul {
             padding: 0px;
             margin: 0px;
+            height: 100%;
             .on_tab{
                 display: block;
             }
@@ -349,11 +354,11 @@ canvas{
                 list-style-type: none;
                 color: #331703;
                 margin-left: -1px;
-                
             }
             ul {
+                height: 80%;
                 display: none;
-                background: url(../img/orange-fon.png) no-repeat;
+                background: url(../img/orange-fon.png);
                 position: relative;
                 z-index: 1;
                 width: 219px;

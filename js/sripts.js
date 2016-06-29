@@ -15,10 +15,10 @@ $(document).ready(function () {
     $('.open_tab').click(function(e){
         var ifOn = $(this).next().css('display');
         if(ifOn == 'block'){
-            $(this).next().hide();
+            $(this).next().hide('slow');
         }else{
-            $('.tab').hide();
-            $(this).next().show();
+            $('.tab').hide('slow');
+            $(this).next().show('slow');
         }
     })
     /* open top menu */
@@ -27,10 +27,12 @@ $(document).ready(function () {
         var ifOn = $(menu).css('top');
         for(var i = 0; i < menu.length; i++){
             if( ifOn == '-67px'){
+                $('.arrow_top').css({"transform":"rotate(270deg)"})
                 $(menu).animate({
                     'top': '30px'
                 })
             }else{
+                $('.arrow_top').css({"transform":"rotate(90deg)"})
                 $(menu).animate({
                     'top': '-67px'
                 })
@@ -42,10 +44,12 @@ $(document).ready(function () {
     $('.right_arrow_menu').click(function(){
         var block = $('#bar_nav').css('right');
         if(block == '-220px'){
+            $('.arrow_top_bar').css({"transform":"rotate(180deg)"});
             $('#bar_nav').animate({
                 'right': '10px'
             })
         }else{
+            $('.arrow_top_bar').css({"transform":"rotate(0deg)"});
             $('#bar_nav').animate({
                 'right': '-220px'
             })
@@ -115,9 +119,9 @@ $(document).ready(function () {
         var tabs = $('.tabs');
         for(var i = 0; i < tabs.length; i++){
             var sections = $(tabs[i]).attr('section');
-            $(document.getElementById(sections)).css('display', 'none');
+            $(document.getElementById(sections)).hide('slow');
         }
-        $(document.getElementById(tab)).css('display', 'block');
+        $(document.getElementById(tab)).show('slow');
     })
     
     $('.button').click(function(){
@@ -148,36 +152,36 @@ $(document).ready(function () {
     })
     
     /* grid sistem 1x1 2x2 3x3 */
-    var grid_1 = '<div class="row_1"><div class="col-xs-12"><canvas class="canvas" id="vc1"></canvas></div></div>';
-    var grid_2 = '<div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc1"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc2"></canvas></div></div><div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc3"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc4"></canvas></div></div>';
-    var grid_3 = '<div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc1"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc2"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc3"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc4"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc5"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc6"></canvas></div></div>';
+    var grid_1 = '<div class="row_1"><div class="col-xs-12"><canvas class="canvas" id="vc1" ready="false"></canvas></div></div>';
+    var grid_2 = '<div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc1" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc2" ready="false"></canvas></div></div><div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc3" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc4" ready="false"></canvas></div></div>';
+    var grid_3 = '<div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc1" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc2" ready="false"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc3" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc4" ready="false"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc5" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc6" ready="false"></canvas></div></div>';
     
     $('.listDisplay li').click(function(){
+        $('.listDisplay').hide('slow');
         var val = $(this).attr('val');
         var container = $('.grid');
         
         switch (val){
             case '1':
                 container.html(grid_1);
-                drug()
+                $('.canvas').click(borderCanvas);
                 break;
             case '4':
-                console.log('work');
                 container.html(grid_2);
-                drug()
+                $('.canvas').click(borderCanvas);
                 break;
             case '6':
                 container.html(grid_3);
-                drug()
+                $('.canvas').click(borderCanvas);
                 break;
         }
     })
     /* WORK WITH CAMS */
     liTag();
-    drug();
-
+    
+    $('.canvas').click(borderCanvas);
+    $('.tab li').click(showVideo);
 })
-
 
 
 
