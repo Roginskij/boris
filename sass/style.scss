@@ -215,7 +215,7 @@ canvas{
             margin: 0 auto;
             position: relative;
             margin-top: -22px;
-            transform: rotate(90deg);
+            transform: rotate(-90deg);
             transition: $transition;
         }
        
@@ -325,6 +325,9 @@ canvas{
             padding: 0px;
             margin: 0px;
             height: 100%;
+            .offer, .group_list{
+                display: none;
+            }
             .on_tab{
                 display: block;
             }

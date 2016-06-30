@@ -27,12 +27,12 @@ $(document).ready(function () {
         var ifOn = $(menu).css('top');
         for(var i = 0; i < menu.length; i++){
             if( ifOn == '-67px'){
-                $('.arrow_top').css({"transform":"rotate(270deg)"})
+                $('.arrow_top').css({"transform":"rotate(90deg)"})
                 $(menu).animate({
                     'top': '30px'
                 })
             }else{
-                $('.arrow_top').css({"transform":"rotate(90deg)"})
+                $('.arrow_top').css({"transform":"rotate(-90deg)"})
                 $(menu).animate({
                     'top': '-67px'
                 })

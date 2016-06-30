@@ -183,7 +183,7 @@ canvas {
       margin: 0 auto;
       position: relative;
       margin-top: -22px;
-      transform: rotate(90deg);
+      transform: rotate(-90deg);
       transition: all 0.5s ease; }
   #top_menu .right_arrow_menu {
     z-index: 9;
@@ -274,6 +274,8 @@ canvas {
       padding: 0px;
       margin: 0px;
       height: 100%; }
+      #bar_nav .bar ul .offer, #bar_nav .bar ul .group_list {
+        display: none; }
       #bar_nav .bar ul .on_tab {
         display: block; }
       #bar_nav .bar ul .open_tab:hover {
