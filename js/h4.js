@@ -1,46 +1,62 @@
     /* WORK WITH CAMS */
-    /* build li tag groups and cams*/
-    function liTag() {
-        $.get('/h4l/get_groups', function(data){
+
+function liTag() {
+        $.get('http://h4l.paliy.lviv.ua/h4l/get_groups', function(data){
           if(data.state == 'ok' ){
             var arr = data.response;
-//            $('#group_cams li').remove();
             for (var i = 0; i < arr.length; i++) {
                 $('#group_cams').append('<h4>' + arr[i].name + '</h4>');
                 for (var q = 0; q < arr[i].cams.length; q++) {
-                    $('#group_cams').append('<li url="' + arr[i].cams[q].id + '"><img src="./img/cam_green.png" alt="">' + arr[i].cams[q].name + '</li>');
+                    $('#group_cams').append('<li openlist="' + arr[i].name + '" url="' + arr[i].cams[q].id + '"><img src="./img/cam_green.png" alt="">' + arr[i].cams[q].name + '</li>');
                 }
             }
-          }
-      })
-    }
-/* Show video online inside */
-function showVideo(){
-        var attr = $('.canvas[ready="true"]');
-        var id_cam = $(this).attr('url');
-        var data = {
-            id: id_cam
+        } 
+            
+        /* open list in rightbar */
+        function openListBar(){
+            var groupLi = $(this).text();
+            var li = $('li[openList="' + groupLi + '"]');
+            $(li).stop();
+            $(li).toggle('slow');
         }
-        var id_canvas = $('.canvas[ready="true"]').attr('id');
-        $.get('/h4l/get_cam_uri', data, function(data){
-          if(data.state == 'ok' ){
-            var uri = data.response;
-            var client = new WebSocket(uri);
-            var canvas = document.getElementById(id_canvas);
-            var player = new jsmpeg(client, {
-                canvas: canvas
-            });
-            $('.canvas').css({
-                'border': '1px dashed #460800',
-            });
-          }else{
-              throw ("I can't to download by url")
-          }
+        /* Show video online inside canvas*/
+        function showVideo(){
+                var span = $('.canvas[ready="true"]').next();
+                var attr = $('.canvas[ready="true"]');
+                var id_cam = $(this).attr('url');
+                var data = {
+                    id: id_cam
+                }
+                var id_canvas = $('.canvas[ready="true"]').attr('id');
+                $.get('http://h4l.paliy.lviv.ua/h4l/get_cam_uri', data, function(data){
+                  if(data.state == 'ok' ){
+                    $(span).attr('openScreen', true)
+                    var uri = data.response;
+                    var client = new WebSocket(uri);
+                    var canvas = document.getElementById(id_canvas);
+                    var player = new jsmpeg(client, {
+                        canvas: canvas
+                    });
+                    $('.canvas').css({
+                        'border': '1px dashed #460800',
+                    });
+                    $('.canvas').attr('ready', false);
+                  }else{
+                      throw ("I can't to download by url")
+                  }
 
+              })
+        }
+        $('.tab h4').click(openListBar);
+        $('.tab li').on('click', function(){
+            if($('.canvas[ready="true"]').length != 0){
+                showVideo();
+            }
+        });
       })
-    
+        
 }
-/* border dashed on canvas block with "ready" - attr */
+/* border around canvas */
 function borderCanvas(){
     var _this = this;
     var id_canvas = $(this).attr('id');
@@ -62,5 +78,7 @@ function borderCanvas(){
         $(this).attr('ready', false); 
     }
 }
-
-
+$(document).ready(function(){
+    liTag();
+    $('.canvas').click(borderCanvas);
+})

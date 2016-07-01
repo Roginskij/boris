@@ -152,9 +152,26 @@ $(document).ready(function () {
     })
     
     /* grid sistem 1x1 2x2 3x3 */
-    var grid_1 = '<div class="row_1"><div class="col-xs-12"><canvas class="canvas" id="vc1" ready="false"></canvas></div></div>';
-    var grid_2 = '<div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc1" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc2" ready="false"></canvas></div></div><div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc3" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc4" ready="false"></canvas></div></div>';
-    var grid_3 = '<div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc1" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc2" ready="false"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc3" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc4" ready="false"></canvas></div></div><div class="row_3"><div class="col-xs-6"><canvas class="canvas" id="vc5" ready="false"></canvas></div><div class="col-xs-6"><canvas class="canvas" id="vc6" ready="false"></canvas></div></div>';
+    var grid_1 = '<div class="row_1"><div class="col-xs-12"><canvas class="canvas" id="vc1" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div></div>';
+    var grid_2 = '<div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc1" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-6"><canvas class="canvas" id="vc2" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div></div><div class="row_2"><div class="col-xs-6"><canvas class="canvas" id="vc3" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-6"><canvas class="canvas" id="vc4" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div></div>';
+    
+    var grid_3 = '<div class="row_3"><div class="col-xs-4"><canvas class="canvas" id="vc1" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-4"><canvas class="canvas" id="vc2" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-4"><canvas class="canvas" id="vc3" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div></div><div class="row_3"><div class="col-xs-4"><canvas class="canvas" id="vc4" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-4"><canvas class="canvas" id="vc5" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-4"><canvas class="canvas" id="vc6" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div></div><div class="row_3"><div class="col-xs-4"><canvas class="canvas" id="vc7" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-4"><canvas class="canvas" id="vc8" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div><div class="col-xs-4"><canvas class="canvas" id="vc9" ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div></div>';
+    
+    /* fuulScreen canvas */
+    var className; // class for fullscreen option
+    function fullScreen(){
+        if($(this).attr('fullScreen') == 'false' && $(this).attr('openScreen') == 'true'){
+            className = $(this).parent().attr('class');
+            $(this).parent().removeClass();
+            $(this).prev().addClass('fullscreen');
+            $(this).attr('fullScreen', true);
+        }else{
+            $(this).parent().addClass(className);
+            $(this).prev().removeClass('fullscreen');
+            $(this).attr('fullScreen', false);
+        }
+    }
+    
     
     $('.listDisplay li').click(function(){
         $('.listDisplay').hide('slow');
@@ -165,22 +182,23 @@ $(document).ready(function () {
             case '1':
                 container.html(grid_1);
                 $('.canvas').click(borderCanvas);
+                $('.fullScreen').click(fullScreen)
                 break;
             case '4':
                 container.html(grid_2);
                 $('.canvas').click(borderCanvas);
+                $('.fullScreen').click(fullScreen)
                 break;
             case '6':
                 container.html(grid_3);
                 $('.canvas').click(borderCanvas);
+                $('.fullScreen').click(fullScreen)
                 break;
         }
     })
-    /* WORK WITH CAMS */
-    liTag();
     
-    $('.canvas').click(borderCanvas);
-    $('.tab li').click(showVideo);
+    /* fuulScreen canvas */
+    $('.fullScreen').click(fullScreen)
 })
 
 
