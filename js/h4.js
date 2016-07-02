@@ -1,7 +1,7 @@
     /* WORK WITH CAMS */
 
 function liTag() {
-        $.get('http://h4l.paliy.lviv.ua/h4l/get_groups', function(data){
+        $.get('/h4l/get_groups', function(data){
           if(data.state == 'ok' ){
             var arr = data.response;
             for (var i = 0; i < arr.length; i++) {
@@ -28,7 +28,7 @@ function liTag() {
                     id: id_cam
                 }
                 var id_canvas = $('.canvas[ready="true"]').attr('id');
-                $.get('http://h4l.paliy.lviv.ua/h4l/get_cam_uri', data, function(data){
+                $.get('/h4l/get_cam_uri', data, function(data){
                   if(data.state == 'ok' ){
                     $(span).attr('openScreen', true)
                     var uri = data.response;
