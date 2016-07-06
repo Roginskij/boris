@@ -112,16 +112,16 @@ $(document).ready(function () {
             
         }
     })
-    
+    /* SETUP page, tabs */
     $('.tabs').click(function(event){
         event.preventDefault();
         var tab = $(this).attr('section');
         var tabs = $('.tabs');
         for(var i = 0; i < tabs.length; i++){
             var sections = $(tabs[i]).attr('section');
-            $(document.getElementById(sections)).hide('slow');
+            $(document.getElementById(sections)).hide();
         }
-        $(document.getElementById(tab)).show('slow');
+        $(document.getElementById(tab)).show();
     })
     
     $('.button').click(function(){
@@ -189,7 +189,7 @@ $(document).ready(function () {
                 $('.canvas').click(borderCanvas);
                 $('.fullScreen').click(fullScreen)
                 break;
-            case '6':
+            case '9':
                 container.html(grid_3);
                 $('.canvas').click(borderCanvas);
                 $('.fullScreen').click(fullScreen)
@@ -197,8 +197,16 @@ $(document).ready(function () {
         }
     })
     
-    /* fuulScreen canvas */
+    /* FULLSCREEN CANVAS */
     $('.fullScreen').click(fullScreen)
+    
+    /* RELOCATION TO A SETUP PAGE */
+    var domain = window.location.origin;
+    $('.menu_1').click(function(e){
+        e.preventDefault();
+        window.location.replace(domain + "/setup.html");
+    })
+    
 })
 
 

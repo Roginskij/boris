@@ -1,9 +1,9 @@
 function translateContent(){
     var arr = $('.translate');
     for(var i = 0; i < arr.length; i++){
-        var lan = 'rus';
-        var elem = $(arr[i])
-        var req = '/h4l/translate?language=' + lan + '&phrase=' + $(elem).text() + ''
+        var lan = JSON.parse(window.localStorage.getItem('setup')).lang;
+        var elem = $(arr[i]);
+        var req = 'http://h4l.paliy.lviv.ua/h4l/translate?language=' + lan + '&phrase=' + $(elem).text() + ''
         $.post(req, function(data){
             if(data.state == 'ok'){
                 $(elem).text(data.response);
