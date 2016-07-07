@@ -5,6 +5,10 @@ html {
     background-size: cover;
     height: 100%; }
 
+.active_tub_lang {
+  box-shadow: 5px 2px 11px -1px #000;
+  border-radius: 100px; }
+
 .fullscreen {
   position: absolute;
   z-index: 99;
@@ -14,7 +18,7 @@ html {
 canvas {
   width: 100%;
   height: 100%;
-  border: 1px dashed #460800;
+  border: 2px dashed #6b0c00;
   border-radius: 4px; }
 
 .container {
@@ -26,7 +30,8 @@ canvas {
   width: 100%; }
   .grid div div:hover span {
     display: block; }
-  .grid div .col-xs-6, .grid div .col-xs-12 {
+  .grid div .col-xs-6,
+  .grid div .col-xs-12 {
     height: 100%; }
   .grid div span:hover {
     cursor: pointer; }
@@ -190,7 +195,6 @@ canvas {
     background: -moz-linear-gradient(top, black 0%, white 47%, white 50%, black 100%);
     background: -webkit-linear-gradient(top, black 0%, white 47%, white 50%, black 100%);
     background: linear-gradient(to bottom, black 0%, white 47%, white 50%, black 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
     position: absolute;
     z-index: 2; }
     #top_menu .top_button span {
@@ -215,7 +219,6 @@ canvas {
     background: -moz-linear-gradient(top, #6c411f 0%, white 47%, white 50%, #6c411f 100%);
     background: -webkit-linear-gradient(top, #6c411f 0%, white 47%, white 50%, #6c411f 100%);
     background: linear-gradient(to bottom, #6c411f 0%, white 47%, white 50%, #6c411f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f',GradientType=0 );
     position: absolute;
     right: 0px;
     top: 0px; }
@@ -296,7 +299,8 @@ canvas {
       padding: 0px;
       margin: 0px;
       height: 100%; }
-      #bar_nav .bar ul .offer, #bar_nav .bar ul .group_list {
+      #bar_nav .bar ul .offer,
+      #bar_nav .bar ul .group_list {
         display: none; }
       #bar_nav .bar ul .on_tab {
         display: block; }
@@ -417,11 +421,29 @@ canvas {
   background-size: cover;
   height: 43px;
   margin: 10px 0px; }
-  #info_sistem .menu_setting ul li {
-    line-height: 43px;
-    display: inline-block; }
-    #info_sistem .menu_setting ul li a {
-      color: #7d3e18; }
+  #info_sistem .menu_setting ul {
+    background: url("../img/bg_setup_bar.png") no-repeat;
+    background-size: cover; }
+    #info_sistem .menu_setting ul li {
+      line-height: 43px;
+      display: inline-block;
+      margin-right: 30px; }
+      #info_sistem .menu_setting ul li a {
+        color: #7d3e18;
+        padding: 0px 20px;
+        display: block; }
+      #info_sistem .menu_setting ul li a:hover {
+        background: url("../img/hover.png") no-repeat;
+        background-size: 100% 80%;
+        background-position: 0px;
+        padding: 0px 20px;
+        text-decoration: none; }
+      #info_sistem .menu_setting ul li a.active_tab {
+        background: url("../img/hover.png") no-repeat;
+        background-size: 100% 80%;
+        background-position: 0px;
+        padding: 0px 20px;
+        text-decoration: none; }
 
 #setting_rec {
   display: block; }

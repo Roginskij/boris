@@ -1,7 +1,7 @@
     /* WORK WITH CAMS */
 
 function liTag() {
-        $.get('/h4l/get_groups', function(data){
+        $.get(domain + '/h4l/get_groups', function(data){
           if(data.state == 'ok' ){
             var arr = data.response;
             for (var i = 0; i < arr.length; i++) {
@@ -28,7 +28,7 @@ function liTag() {
                     id: id_cam
                 }
                 var id_canvas = $('.canvas[ready="true"]').attr('id');
-                $.get('/h4l/get_cam_uri', data, function(data){
+                $.get(domain + '/h4l/get_cam_uri', data, function(data){
                   if(data.state == 'ok' ){
                     $(span).attr('openScreen', true)
                     var uri = data.response;
@@ -38,7 +38,7 @@ function liTag() {
                         canvas: canvas
                     });
                     $('.canvas').css({
-                        'border': '1px dashed #460800',
+                        'border': '2px dashed #6b0c00',
                     });
                     $('.canvas').attr('ready', false);
                   }else{
@@ -65,7 +65,7 @@ function borderCanvas(){
     if(attr == "false"){
         $('.canvas').attr('ready', false);
         $('.canvas').css({
-            'border': '1px dashed #460800',
+            'border': '2px dashed #6b0c00',
         })
         $(_this).css({
             'border': '2px dashed #00eaff',
@@ -73,7 +73,7 @@ function borderCanvas(){
         $(_this).attr('ready', true);
     }else if(attr == 'true'){
         $(this).css({
-            'border': '1px dashed #460800',
+            'border': '2px dashed #6b0c00',
         });
         $(this).attr('ready', false); 
     }

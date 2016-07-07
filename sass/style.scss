@@ -1,45 +1,52 @@
 $transition: all 0.5s ease;
- 
 html {
     height: 100%;
     body {
         background: url(../img/bg_html.png) no-repeat;
         background-size: cover;
         height: 100%;
-        
     }
 }
-.fullscreen{
+
+.active_tub_lang {
+    box-shadow: 5px 2px 11px -1px #000;
+    border-radius: 100px;
+}
+
+.fullscreen {
     position: absolute;
     z-index: 99;
     left: 0px;
     top: 0px;
 }
-canvas{
+
+canvas {
     width: 100%;
-     height: 100%;
-            border: 1px dashed #460800;
-            border-radius: 4px;
+    height: 100%;
+    border: 2px dashed #6b0c00;
+    border-radius: 4px;
 }
-.container{
+
+.container {
     min-width: 992px;
     max-width: 1200px
 }
 
-.grid{
+.grid {
     height: 96%;
     width: 100%;
-    div div:hover span{
+    div div:hover span {
         display: block;
     }
-    div{
-        .col-xs-6, .col-xs-12{
-           height: 100%
+    div {
+        .col-xs-6,
+        .col-xs-12 {
+            height: 100%
         }
-        span:hover{
+        span:hover {
             cursor: pointer;
         }
-        span{
+        span {
             display: none;
             color: white;
             position: absolute;
@@ -51,24 +58,24 @@ canvas{
             border: 2px solid #FFF;
         }
     }
-    .row_1{
+    .row_1 {
         height: 97%;
         margin: 1% 0;
     }
-    .row_2{
+    .row_2 {
         height: 47%;
         margin: 1% 0;
     }
-    .row_3{
+    .row_3 {
         height: 31%;
         margin: 1% 0;
-        .col-xs-4{
+        .col-xs-4 {
             height: 100%;
         }
     }
 }
 
-.menu_setting>ul>li>a:hover .bg_menu_hover{
+.menu_setting>ul>li>a:hover .bg_menu_hover {
     background-position: 0px -43px;
 }
 
@@ -215,17 +222,17 @@ canvas{
 
 #top_menu {
     height: 30px;
-    .top_button:hover{
+    .top_button:hover {
         cursor: pointer;
     }
     .top_button {
         width: 100%;
         height: 30px;
-        background: rgb(0,0,0); 
-        background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 100%); 
-        background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 100%); 
-        background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 100%); 
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); 
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
+//        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
         position: absolute;
         z-index: 2;
         span {
@@ -244,17 +251,16 @@ canvas{
             transform: rotate(-90deg);
             transition: $transition;
         }
-       
     }
     .right_arrow_menu {
         z-index: 9;
         width: 40px;
         height: 30px;
-        background: rgb(108,65,31);
-        background: -moz-linear-gradient(top,  rgba(108,65,31,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 50%, rgba(108,65,31,1) 100%);
-        background: -webkit-linear-gradient(top,  rgba(108,65,31,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(108,65,31,1) 100%);
-        background: linear-gradient(to bottom,  rgba(108,65,31,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,1) 50%,rgba(108,65,31,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f',GradientType=0 );
+        background: rgb(108, 65, 31);
+        background: -moz-linear-gradient(top, rgba(108, 65, 31, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(108, 65, 31, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(108, 65, 31, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(108, 65, 31, 1) 100%);
+        background: linear-gradient(to bottom, rgba(108, 65, 31, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(108, 65, 31, 1) 100%);
+//        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f', GradientType=0);
         position: absolute;
         right: 0px;
         top: 0px;
@@ -269,7 +275,7 @@ canvas{
             transition: $transition;
         }
     }
-    .right_arrow_menu:hover{
+    .right_arrow_menu:hover {
         cursor: pointer;
     }
     .menu {
@@ -309,7 +315,7 @@ canvas{
                 .menu_5 {
                     background: url(../img/setting_11.png);
                 }
-                .listDisplay{
+                .listDisplay {
                     display: none;
                     position: absolute;
                     padding: 0px;
@@ -318,14 +324,14 @@ canvas{
                     background: url(../img/orange-fon.png) no-repeat;
                     margin-top: 11px;
                     font-size: 17px;
-                    li{
+                    li {
                         color: #fff;
                         width: 100%;
                         padding: 5px 0px;
                         transition: $transition;
                         margin: 0px;
                     }
-                    li:hover{
+                    li:hover {
                         background: darkgoldenrod;
                         color: #000;
                         transition: $transition;
@@ -351,13 +357,14 @@ canvas{
             padding: 0px;
             margin: 0px;
             height: 100%;
-            .offer, .group_list{
+            .offer,
+            .group_list {
                 display: none;
             }
-            .on_tab{
+            .on_tab {
                 display: block;
             }
-            .open_tab:hover{
+            .open_tab:hover {
                 cursor: pointer;
             }
             .nav_cams:before {
@@ -402,19 +409,19 @@ canvas{
                     position: absolute;
                     left: 10px;
                 }
-                h4:hover{
+                h4:hover {
                     cursor: pointer;
                 }
                 h4 {
                     margin: 0px 0px 10px 0px;
                     padding-left: 50px;
                     color: #7d3e18;
-                     -moz-user-select: none;
+                    -moz-user-select: none;
                     -khtml-user-select: none;
                     -webkit-user-select: none;
-                    user-select: none; 
+                    user-select: none;
                 }
-                li:hover{
+                li:hover {
                     cursor: pointer;
                 }
                 li {
@@ -428,7 +435,7 @@ canvas{
                     -moz-user-select: none;
                     -khtml-user-select: none;
                     -webkit-user-select: none;
-                    user-select: none; 
+                    user-select: none;
                     img {
                         margin-right: 5px;
                     }
@@ -501,11 +508,30 @@ canvas{
         height: 43px;
         margin: 10px 0px;
         ul {
+            background: url('../img/bg_setup_bar.png') no-repeat;
+            background-size: cover;
             li {
                 line-height: 43px;
                 display: inline-block;
+                margin-right: 30px;
                 a {
-                    color: #7d3e18
+                    color: #7d3e18;
+                    padding: 0px 20px;
+                    display: block;
+                }
+                a:hover {
+                    background: url("../img/hover.png") no-repeat;
+                    background-size: 100% 80%;
+                    background-position: 0px;
+                    padding: 0px 20px;
+                    text-decoration: none;
+                }
+                a.active_tab {
+                    background: url("../img/hover.png") no-repeat;
+                    background-size: 100% 80%;
+                    background-position: 0px;
+                    padding: 0px 20px;
+                    text-decoration: none;
                 }
             }
         }
@@ -672,7 +698,7 @@ canvas{
 }
 
 #users {
-        display: none;
+    display: none;
     .user {
         max-width: 140px;
         height: 140px;

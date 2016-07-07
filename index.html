@@ -1,89 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/sripts.js"></script>
-    <script src="js/h4.js"></script>
-    <script src="js/jsmpg.js"></script>
-    <script src="js/setup.js"></script>
+    <script src="js/login.js"></script>
 </head>
-
 <body>
-    <div id="top_menu">
-        <div class="top_button">
-            <span id='time'></span>
-            <div class="arrow_top"></div>
-        </div>
-        <div class="right_arrow_menu">
-            <div class="arrow_top_bar"></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a class="menu_1" title="Настройки" href=""></a>
-                        </li>
-<!--
-                        <li>
-                            <a class="menu_2" title="Панели" href=""></a>
-                        </li>
-                        <li>
-                            <a class="menu_3" title="Журнал" href=""></a>
-                        </li>
-                        <li>
-                            <a class="menu_4" title="Плеер" href=""></a>
-                        </li>
--->
-                        <li>
-                            <a class="menu_5" title="Экраны" href=""></a>
-                            <ul class="listDisplay">
-                                <li val='1'>1x1</li>
-                                <li val='4'>2x2</li>
-                                <li val='9'>3x3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="bar_nav">
-        <div class="bar">
-            <ul>
-                <li class="open_tab offer">Предложения</li>
-                <ul class="tab">
-                    <li></li>
-                </ul>
-                <li class="nav_cams open_tab translate">Cameras</li>
-                <ul class="tab" id="group_cams"></ul>
-                <li class="open_tab group_list">Группы</li>
-                <ul class="tab" id="group">
-                    <li>
-                        <div class="button">
-                            <button turn="off" type="button"></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="button">
-                            <button turn="off" type="button"></button>
-                        </div>
-                    </li>
-                </ul>
-            </ul>
-        </div>
-    </div>
-    <div class="container grid">
-        <div class="row_1">
-            <div class="col-xs-12"><canvas class="canvas" id='vc1' ready="false"></canvas><span class="fullScreen" fullScreen="false" openScreen="false"></span></div>
-        </div>
-    </div>
+    <span>Login</span><input id="login" type="text">
+    <br>
+    <span>Password</span><input id="password" type="password">
+    <button id="send_aut">send</button>
 </body>
-<script src="js/translate.js"></script>
 </html>
