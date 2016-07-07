@@ -1,4 +1,6 @@
-var domain = 'http://h4l.paliy.lviv.ua';
+//var domain = 'http://h4l.paliy.lviv.ua';
+var domain = '';
+
 $(document).ready(function () {
     /* Authorization */
     $('#send_aut').click(function () {

@@ -1,5 +1,5 @@
-var domain = 'http://h4l.paliy.lviv.ua';
-//var domain = '';
+//var domain = 'http://h4l.paliy.lviv.ua';
+var domain = '';
 $(document).ready(function () {
     
     /* time at the top menu */
