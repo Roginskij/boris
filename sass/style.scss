@@ -391,7 +391,8 @@ canvas {
                 color: #331703;
                 margin-left: -1px;
             }
-            ul {
+            ul.tab {
+                overflow: auto;
                 height: 80%;
                 display: none;
                 background: url(../img/orange-fon.png);

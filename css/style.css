@@ -328,7 +328,8 @@ canvas {
         list-style-type: none;
         color: #331703;
         margin-left: -1px; }
-      #bar_nav .bar ul ul {
+      #bar_nav .bar ul ul.tab {
+        overflow: auto;
         height: 80%;
         display: none;
         background: url(../img/orange-fon.png);
@@ -337,7 +338,7 @@ canvas {
         width: 219px;
         margin-top: -10px;
         padding-top: 10px; }
-        #bar_nav .bar ul ul h4:before {
+        #bar_nav .bar ul ul.tab h4:before {
           content: "";
           background: url(../img/cam.png) no-repeat;
           width: 30px;
@@ -345,9 +346,9 @@ canvas {
           display: block;
           position: absolute;
           left: 10px; }
-        #bar_nav .bar ul ul h4:hover {
+        #bar_nav .bar ul ul.tab h4:hover {
           cursor: pointer; }
-        #bar_nav .bar ul ul h4 {
+        #bar_nav .bar ul ul.tab h4 {
           margin: 0px 0px 10px 0px;
           padding-left: 50px;
           color: #7d3e18;
@@ -355,9 +356,9 @@ canvas {
           -khtml-user-select: none;
           -webkit-user-select: none;
           user-select: none; }
-        #bar_nav .bar ul ul li:hover {
+        #bar_nav .bar ul ul.tab li:hover {
           cursor: pointer; }
-        #bar_nav .bar ul ul li {
+        #bar_nav .bar ul ul.tab li {
           display: none;
           background: none;
           padding-left: 10px;
@@ -369,7 +370,7 @@ canvas {
           -khtml-user-select: none;
           -webkit-user-select: none;
           user-select: none; }
-          #bar_nav .bar ul ul li img {
+          #bar_nav .bar ul ul.tab li img {
             margin-right: 5px; }
 
 #info_sistem .info_bg {
