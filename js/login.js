@@ -1,7 +1,9 @@
-//var domain = 'http://h4l.paliy.lviv.ua';
-var domain = '';
+var domain = 'http://h4l.paliy.lviv.ua';
+//var domain = '';
 
 $(document).ready(function () {
+    $(document).keypress(function(e) {
+    if(e.which == 13) {
     /* Authorization */
     $('#send_aut').click(function () {
         var password = $('#password').val();
@@ -18,4 +20,5 @@ $(document).ready(function () {
             })
         }
     })
+    }
 })

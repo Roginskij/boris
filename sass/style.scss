@@ -20,7 +20,7 @@ html {
     top: 0px;
 }
 
-canvas {
+.canvas {
     width: 100%;
     height: 100%;
     border: 2px dashed #6b0c00;
@@ -202,7 +202,7 @@ canvas {
     color: #fff;
     border: none;
     height: 24px;
-    padding-left: 10px;
+    padding: 0px 10px;
     background-size: cover;
 }
 
@@ -232,7 +232,7 @@ canvas {
         background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
         background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
         background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
-//        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
+        //        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
         position: absolute;
         z-index: 2;
         span {
@@ -260,7 +260,7 @@ canvas {
         background: -moz-linear-gradient(top, rgba(108, 65, 31, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(108, 65, 31, 1) 100%);
         background: -webkit-linear-gradient(top, rgba(108, 65, 31, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(108, 65, 31, 1) 100%);
         background: linear-gradient(to bottom, rgba(108, 65, 31, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 1) 50%, rgba(108, 65, 31, 1) 100%);
-//        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f', GradientType=0);
+        //        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6c411f', endColorstr='#6c411f', GradientType=0);
         position: absolute;
         right: 0px;
         top: 0px;
@@ -854,3 +854,40 @@ canvas {
         }
     }
 }
+
+/* Login page */
+
+.login_block {
+    background: url('../img/login_bg.png') no-repeat;
+    width: 492px;
+    height: 362px;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    .login_input:first-child {
+        margin-top: 200px;
+    }
+    .login_input {
+        margin-bottom: 40px;
+        p {
+            display: inline-block;
+            margin: 0px 0px 0px 70px;
+            text-transform: uppercase;
+            color: #fff;
+            padding-top: 5px;
+            font-size: 17px;
+        }
+        input {
+            float: right;
+            width: 170px;
+            height: 26px;
+            margin-right: 70px;
+        }
+    }
+}
+
+
+/*  */
